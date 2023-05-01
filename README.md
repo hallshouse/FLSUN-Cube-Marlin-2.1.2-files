@@ -9,7 +9,7 @@ My machine is configured as follows:
 <li>Movement Extremities: X=320, Y=335, Z=355)</li>
 <li>Movement Endstops: X=280 (could be set to 300), Y=335, Z=350</li>
 <li>Drivers 5*TMC2209 (1=X, 1=Y, 1=Z, 2=Extruders)</li>
-<li> *Z uses the FLSUN Driver splitter to run 2 motors for the dual Z leadscrews</li>
+<li> *Z uses the FLSUN Driver splitter to run 2 motors for the dual Z leadscrews off the one TMC2209 Driver</li>
 <li>Tools: Chimera, Volcano, Single, Laser (manually swapped via DB25 M/F connectors with standardized full pinout cable from MB)</li>
 <ul><li>MKS SGEN_L V1.0 Temp sensors used are TM1, TB, TM2</li></ul>
 </ul>
