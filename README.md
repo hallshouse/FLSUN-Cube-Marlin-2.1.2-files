@@ -24,7 +24,10 @@ Other notes about my setup:<br/>
 Set the drivers up to use UART and you will not need to make any changes in your configuration_adv.h file.<br/>
 No need to cut pins, jump wires, or do anything more than plugin them in (in the correct orientation of course) if you use the default UART (not Standalone) mode.<br/>
 The configuration.h file is already set up to make use of the TMC2209 drivers for X, Y, Z, E0, and E1 - all in conjunction with the FLSUN.<br/>
+
+# Building the software
 You'll need to install Visual Studio code on your computer to compile all this and save it as a file named firmware.bin on your computer.<br/>
+Add the Marlin Autobuld Extension into Visual Studio Code and your life will be soo much better.<br/>
 You'll then copy that file to an SD card, insert that SD card into your port on the MKS SGEN_L V1.0 MB and power on the printer.<br/>
 If the configuration does not take, you'll need to open Pronterface (or whatever GCODE terminal you use):
 <li>Enter G502 to clear the MB settings, then</li>
