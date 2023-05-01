@@ -12,7 +12,7 @@ My machine is configured as follows:
 <li> *Z uses the FLSUN Driver splitter to run 2 motors for the dual Z leadscrews</li>
 <li>Tools: Chimera, Volcano, Single, Laser (manually swapped via DB25 M/F connectors with standardized full pinout cable from MB)</li>
 <ul><li>MKS SGEN_L V1.0 Temp sensors used are TM1, TB, TM2</li></ul>
-<li>...</li>
+</ul>
 <br/>
 Other notes about my setup:<br/>
 1. My setup uses an induction Z sensor (08N model) and my hotend carriage is completly custom, so you'll need to take these setting into acocunt for you Z sensor offsets as well as your bed dimensions.<br/>
