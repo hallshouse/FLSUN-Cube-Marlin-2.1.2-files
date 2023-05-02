@@ -15,8 +15,8 @@ My machine is configured as follows:
 </ul>
 <br/>
 Other notes about my setup:<br/>
-1. My setup uses an induction Z sensor (08N model) and my hotend carriage is completly custom, so you'll need to take these setting into acocunt for you Z sensor offsets as well as your bed dimensions.<br/>
-2. My Z offsets are found in the configuration.h file as NOZZLE_TO_PROBE_OFFSETS on LN#1564. Adjust these X=25, Y=10, Z=0 values based on your own measurements because these values take into account my custom swappable hotend carriages and my Z Probe is attached to that housing so when I swap the hotends, I keep the Z Probe on the main carriage.<br/>
+1. My setup uses an inductive Z probe (08N model) and my hotend carriage is completly custom, so you'll need to take these settings into acocunt for your Z probe offsets as well as your bed dimensions.<br/>
+2. My Z offsets are found in the configuration.h file as NOZZLE_TO_PROBE_OFFSETS on LN#1564. Adjust these X=25, Y=10, Z=0 values based on your own measurements because these values take into account my custom swappable hotend carriages and my Z Probe is attached to the original FLSUN carriage so when I swap the hotends, I keep the Z Probe on the main carriage.<br/>
 3. As much as people think it's futile, you can use Z_SAFE_HOMING with a fixed sled Z Probe and having home set to the bed center as is done in this configuration.h file.<br/>
 4. I'm using Bilinear ABL (9 touch points).<br/>
 
