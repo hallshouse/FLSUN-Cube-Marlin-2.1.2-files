@@ -5,9 +5,9 @@ Working Marlin 2.1.2 configuration.h for the FLSUN Cube and MKS SGEN_L V1.0, MKs
 My machine is configured as follows:
 <ul>
 <li>Original model: FLSUN Cube</li>
-<li>Replace original MB with MKS SGEN_L V1.0 board. This board is know as LPC1768 in Marlin</li>
+<li>Replace original MB with MKS SGEN_L V1.0 board. This board is known as LPC1768 in Marlin</li>
 <li>Movement Extremities: X=320, Y=335, Z=355)</li>
-<li>Movement Endstops: X=280 (could be set to 300), Y=335, Z=350</li>
+<li>Movement Endstops: X=280 (this is because my 08N inductive probe is 25mm to the right of my hotend), Y=335, Z=350</li>
 <li>Drivers 5*TMC2209 (1=X, 1=Y, 1=Z, 2=Extruders)</li>
 <li> *Z uses the FLSUN Driver splitter to run 2 motors for the dual Z leadscrews off the one TMC2209 Driver</li>
 <li>Tools: Chimera, Volcano, Single, Laser (manually swapped via DB25 M/F connectors with standardized full pinout cable from MB)</li>
