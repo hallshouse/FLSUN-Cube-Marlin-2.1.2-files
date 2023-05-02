@@ -15,7 +15,7 @@ My machine is configured as follows:
 </ul>
 <br/>
 Other notes about my setup:<br/>
-1. My setup uses an inductive Z probe (08N model) and my hotend carriage is completly custom, so you'll need to take these settings into acocunt for your Z probe offsets as well as your bed dimensions.<br/>
+1. My setup uses an inductive Z probe (08N model) and my hotend carriage is completly custom, so you'll need to take these settings into account for your Z probe offsets as well as your bed dimensions.<br/>
 2. My Z offsets are found in the configuration.h file as NOZZLE_TO_PROBE_OFFSETS on LN#1564. Adjust these X=25, Y=10, Z=0 values based on your own measurements because these values take into account my custom swappable hotend carriages and my Z Probe is attached to the original FLSUN carriage so when I swap the hotends, I keep the Z Probe on the main carriage.<br/>
 3. As much as people think it's futile, you can use Z_SAFE_HOMING with a fixed sled Z Probe and having home set to the bed center as is done in this configuration.h file.<br/>
 4. I'm using Bilinear ABL (9 touch points).<br/>
@@ -27,7 +27,7 @@ The configuration.h file is already set up to make use of the TMC2209 drivers fo
 
 # Building the software
 You'll need to install Visual Studio code on your computer to compile all this and save it as a file named firmware.bin on your computer.<br/>
-Add the Marlin Autobuld Extension into Visual Studio Code and your life will be soo much better.<br/>
+Add the Marlin Autobuild Extension into Visual Studio Code and your life will be soo much better.<br/>
 You'll then copy that file to an SD card, insert that SD card into your port on the MKS SGEN_L V1.0 MB and power on the printer.<br/>
 If the configuration does not take, you'll need to open Pronterface (or whatever GCODE terminal you use):
 <li>Enter G502 to clear the MB settings, then</li>
