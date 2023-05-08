@@ -1235,7 +1235,11 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 1500 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 92, 92, 400, 93 }
+//88.888, 88.888, 100, 93
+//88.888, 88.888, 200*8/3, 93
+//80, 80, 600, 93
+//80, 80, 400, 1500
 //88.888,88.888,160,50,50
 //88.888,88.888,400,500,500
 //88.888,88.888,400,88.888,88.888
@@ -1248,7 +1252,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 10 }
+#define DEFAULT_MAX_FEEDRATE          { 400, 400, 400, 10 }
 //800,800,400,400,400
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
@@ -1262,7 +1266,7 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 3000 }
+#define DEFAULT_MAX_ACCELERATION      { 9000, 9000, 3000, 3000 }
 //9000,9000,3000,3000
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
@@ -1561,7 +1565,12 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 25, 10, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { 25, 10, -1.5 }
+//25, 10, 0
+//25, 10, -0.2
+//25, 10, -0.5
+//25, 10, -1.5
+//25, 10, -2
 
 // Enable and set to use a specific tool for probing. Disable to allow any tool.
 //#define PROBING_TOOL 0
@@ -1652,8 +1661,8 @@
 #define Z_PROBE_LOW_POINT          0 // Farthest distance below the trigger-point to go before stopping
 
 // For M851 give a range for adjusting the Z probe offset
-#define Z_PROBE_OFFSET_RANGE_MIN 0
-#define Z_PROBE_OFFSET_RANGE_MAX 0
+#define Z_PROBE_OFFSET_RANGE_MIN -3
+#define Z_PROBE_OFFSET_RANGE_MAX 3
 
 // Enable the M48 repeatability test to test probe accuracy
 //#define Z_MIN_PROBE_REPEATABILITY_TEST
@@ -1778,13 +1787,13 @@
 // @section geometry
 
 // The size of the printable area
-#define X_BED_SIZE 280
-#define Y_BED_SIZE 335
+#define X_BED_SIZE 300
+#define Y_BED_SIZE 300
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS -10
 #define Y_MIN_POS -10
-#define Z_MIN_POS 3
+#define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
 #define Z_MAX_POS 350
@@ -2220,8 +2229,8 @@
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-//#define MANUAL_X_HOME_POS 165
-//#define MANUAL_Y_HOME_POS 185
+//#define MANUAL_X_HOME_POS 135
+//#define MANUAL_Y_HOME_POS 155
 //#define MANUAL_Z_HOME_POS 2
 //#define MANUAL_I_HOME_POS 0
 //#define MANUAL_J_HOME_POS 0
@@ -2240,8 +2249,8 @@
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT 165 // X_CENTER  // X point for Z homing
-  #define Z_SAFE_HOMING_Y_POINT 185 // Y_CENTER  // Y point for Z homing
+  #define Z_SAFE_HOMING_X_POINT X_CENTER // 135  // X point for Z homing
+  #define Z_SAFE_HOMING_Y_POINT Y_CENTER // 155  // Y point for Z homing
   //#define Z_SAFE_HOMING_POINT_ABSOLUTE  // Ignore home offsets (M206) for Z homing position
 #endif
 
