@@ -1235,7 +1235,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 92, 92, 400, 93 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 93, 93, 400, 93 }
 //88.888, 88.888, 100, 93
 //88.888, 88.888, 200*8/3, 93
 //80, 80, 600, 93
@@ -1252,7 +1252,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 400, 400, 400, 10 }
+#define DEFAULT_MAX_FEEDRATE          { 400, 400, 100, 10 }
 //800,800,400,400,400
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
@@ -1266,7 +1266,7 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 9000, 9000, 3000, 3000 }
+#define DEFAULT_MAX_ACCELERATION      { 9000, 9000, 1000, 3000 }
 //9000,9000,3000,3000
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
@@ -1565,7 +1565,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 25, 10, -1.5 }
+#define NOZZLE_TO_PROBE_OFFSET { 25, 10, 0.5 }
 //25, 10, 0
 //25, 10, -0.2
 //25, 10, -0.5
